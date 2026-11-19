@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="checker" aria-labelledby="page-title">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7.5 10V7.5a4.5 4.5 0 0 1 9 0V10m-11 0h13v10h-13V10Z" />
+            <path d="M12 14v2" />
+          </svg>
+        </div>
+        <p class="eyebrow">STAY ONE STEP AHEAD</p>
+        <h1 id="page-title">Password strength</h1>
+        <p class="intro">Check how strong your password is and find out how to make it stronger.</p>
+
+        <label class="input-label" for="password">Your password</label>
+        <div class="password-field">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Type a password to check"
+            autocomplete="new-password"
+            spellcheck="false"
+            autocapitalize="off"
+            aria-describedby="privacy-note strength-message"
+          >
+          <button
+            class="visibility-toggle"
+            id="visibility-toggle"
+            type="button"
+            aria-label="Show password"
+            aria-pressed="false"
+          >
+            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z" />
+              <circle cx="12" cy="12" r="2.5" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="strength-heading">
+          <span>Password strength</span>
+          <span id="strength-message" class="strength-message" aria-live="polite">Not checked</span>
+        </div>
+        <div
+          class="strength-meter"
+          id="strength-meter"
+          role="img"
+          aria-label="Password strength: not checked"
+        >
+          <span class="meter-segment"></span>
+          <span class="meter-segment"></span>
+          <span class="meter-segment"></span>
+          <span class="meter-segment"></span>
+          <span class="meter-segment"></span>
+        </div>
+
+        <div class="requirements">
+          <h2>For a stronger password</h2>
+          <ul class="requirement-list">
+            <li data-rule="length">At least 8 characters</li>
+            <li data-rule="long">At least 12 characters for extra security</li>
+            <li data-rule="lower">A lowercase letter</li>
+            <li data-rule="upper">An uppercase letter</li>
+            <li data-rule="number">A number</li>
+            <li data-rule="symbol">A symbol (like !, @, or #)</li>
+          </ul>
+        </div>
+
+        <p class="privacy-note" id="privacy-note">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 3 19 6v5c0 4.7-3 8-7 10-4-2-7-5.3-7-10V6l7-3Z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+          Your password stays in this browser and is never sent anywhere.
+        </p>
+      </section>
+      <footer>Use a unique password for every account.</footer>
+    </main>
+  </body>
+</html>
